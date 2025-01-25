@@ -38,4 +38,10 @@ const Redirector = () => {
     );
 };
 
-export default Redirector;
+export default function Page() {
+    return (
+        <React.Suspense fallback={<p>Loading...</p>}>
+            <Redirector />
+        </React.Suspense>
+    );
+}
